@@ -118,6 +118,15 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>2. Llibres ordenats per títol alfabèticament:</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre">
+            <xsl:sort select="titol" data-type="text" order="ascending"/>
+            <li>
+              <xsl:value-of select="titol"/>
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
