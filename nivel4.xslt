@@ -68,6 +68,19 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>Llistat de llibres (amb avís d'antiguitat):</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre">
+            <li>
+              <xsl:value-of select="titol"/> (Any: <xsl:value-of select="any"/>)
+              
+              <!-- Si el año es menor a 1980, escribe el texto -->
+              <xsl:if test="any &lt; 1980">
+                <span style="color: orange;"> [Llibre antic]</span>
+              </xsl:if>
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
