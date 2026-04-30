@@ -8,6 +8,8 @@
         <p>Lista de documentos disponibles</p>
         <strong>Titul del primer llibre:</strong> 
         <xsl:value-of select="/biblioteca/llibre[1]/titol"/>
+        <strong>Autor:</strong>
+        <xsl:value-of select="/biblioteca/llibre[1]/autor"/>
       </body>
     </html>
   </xsl:template>
