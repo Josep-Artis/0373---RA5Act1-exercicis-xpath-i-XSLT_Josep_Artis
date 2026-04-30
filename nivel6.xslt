@@ -163,6 +163,21 @@
         <ul>
           <xsl:apply-templates select="/biblioteca/llibre"/>
         </ul>
+        <h2>6.4 Seccions Organitzades</h2>
+        <section>
+          <h3>Secció de Llibres</h3>
+          <ul>
+            <!-- Solo llamamos a los libros -->
+            <xsl:apply-templates select="/biblioteca/llibre"/>
+          </ul>
+        </section>
+        <section>
+          <h3>Secció de Revistes</h3>
+          <ul>
+            <!-- Solo llamamos a las revistas usando la plantilla del 6.3 -->
+            <xsl:apply-templates select="/biblioteca/revista"/>
+          </ul>
+        </section>
       </body>
     </html>
   </xsl:template>
