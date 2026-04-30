@@ -3,6 +3,24 @@
 
   <xsl:template match="/">
     <html>
+    <head>
+        <style>
+          .disponible { 
+            color: #2e7d32; 
+            background-color: #e8f5e9; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            font-weight: bold; 
+          }
+          .prestat { 
+            color: #c62828; 
+            background-color: #ffebee; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            font-style: italic; 
+          }
+        </style>
+      </head>
       <body>
         <h1>Biblioteca</h1>
         <p>Llista de documents disponibles</p>
