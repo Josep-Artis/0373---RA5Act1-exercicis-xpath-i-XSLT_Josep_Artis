@@ -1,0 +1,28 @@
+<biblioteca>
+  <llibre isbn="9788418183194" estat="disponible">
+    <titol>La història interminable</titol>
+    <autor>Michael Ende</autor>
+    <genere>fantasia</genere>
+    <any>1979</any>
+    <preu>18.50</preu>
+  </llibre>
+  <llibre isbn="9788498382661" estat="prestat">
+    <titol>Matilda</titol>
+    <autor>Roald Dahl</autor>
+    <genere>infantil</genere>
+    <any>1988</any>
+    <preu>12.95</preu>
+  </llibre>
+  <llibre isbn="9780451524935" estat="disponible">
+    <titol>1984</titol>
+    <autor>George Orwell</autor>
+    <genere>distopia</genere>
+    <any>1949</any>
+    <preu>10.40</preu>
+  </llibre>
+  <revista codi="R01">
+    <titol>National Geographic</titol>
+    <mes>Gener</mes>
+    <any>2024</any>
+  </revista>
+</biblioteca>
