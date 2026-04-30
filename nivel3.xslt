@@ -25,6 +25,16 @@
             </li>
           </xsl:for-each>
         </ul>
+
+        <h3>Llista Títol - Autor:</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre">
+            <li>
+              <xsl:value-of select="titol"/> - <xsl:value-of select="autor"/>
+            </li>
+          </xsl:for-each>
+        </ul>
+        
       </body>
     </html>
   </xsl:template>
