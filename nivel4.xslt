@@ -99,6 +99,16 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>Llibres de Fantasia o Distopia:</h3>
+        <ul>
+          <!-- Filtramos: género debe ser 'fantasia' O 'distopia' -->
+          <xsl:for-each select="/biblioteca/llibre[genere='fantasia' or genere='distopia']">
+            <li>
+              <xsl:value-of select="titol"/> 
+              (Gènere: <xsl:value-of select="genere"/>)
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
