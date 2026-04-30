@@ -236,6 +236,14 @@
             <xsl:text>&#10;</xsl:text> <!-- Esto genera un salto de línea real -->
           </xsl:for-each>
         </div>
+        <div style="background-color: #e3f2fd; padding: 15px; border-left: 5px solid #2196f3; margin-top: 20px;">
+          <p style="font-size: 1.2em; margin: 0;">
+            <strong>Nombre total de llibres al catàleg: </strong>
+            <span style="color: #1976d2;">
+              <xsl:value-of select="count(/biblioteca/llibre)"/>
+            </span>
+          </p>
+        </div>
       </body>
     </html>
   </xsl:template>
