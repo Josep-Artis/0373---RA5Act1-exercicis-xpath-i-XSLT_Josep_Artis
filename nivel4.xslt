@@ -14,7 +14,7 @@
         </p>
         <h3>Revista:</h3> */ voy a poner algunos sub-titulos para ordenarlo un poco.
         <p>
-          <strong>Codi: </strong> <xsl:value-of select="/biblioteca/[1]revista/@codi"/>
+          <strong>Codi: </strong> <xsl:value-of select="/biblioteca/revista[1]/@codi"/>
           <!-- Preguntar a edu: he leido que aqui podriamos prescindir del 1 porque el codigo de la revista es unico, pero no se si es correcto -->
         </p>
 
@@ -52,7 +52,14 @@
             </tr>
           </xsl:for-each>
         </table>
-
+<h3>Llibres Disponibles (Filtre @estat='disponible'):</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre[@estat='disponible']">
+            <li>
+              <xsl:value-of select="titol"/> (Estat: <xsl:value-of select="@estat"/>)
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>

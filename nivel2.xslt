@@ -12,7 +12,7 @@
         <xsl:value-of select="/biblioteca/llibre[1]/autor"/>
         <strong>Codi de la revista:</strong>
         <xsl:value-of select="/biblioteca/revista[1]/@codi"/>
-        /*Preguntar a edu: he leido que aqui podriamos prescindir del 1 porque el codigo de la revista es unico, pero no se si es correcto*/
+        <!-- Preguntar a edu: he leido que aqui podriamos prescindir del 1 porque el codigo de la revista es unico, pero no se si es correcto -->
       </body>
     </html>
   </xsl:template>
