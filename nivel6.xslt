@@ -167,17 +167,29 @@
         <section>
           <h3>Secció de Llibres</h3>
           <ul>
-            <!-- Solo llamamos a los libros -->
             <xsl:apply-templates select="/biblioteca/llibre"/>
           </ul>
         </section>
         <section>
           <h3>Secció de Revistes</h3>
           <ul>
-            <!-- Solo llamamos a las revistas usando la plantilla del 6.3 -->
             <xsl:apply-templates select="/biblioteca/revista"/>
           </ul>
         </section>
+        <header style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+          <h1>Informe de la Biblioteca Municipal</h1>
+          <p>Resum general de l'inventari: Llibres i Revistes</p>
+        </header>
+
+        <h3>Llistat complet de Llibres:</h3>
+        <ul>
+          <xsl:apply-templates select="/biblioteca/llibre"/>
+        </ul>
+
+        <h3>Llistat complet de Revistes:</h3>
+        <ul>
+          <xsl:apply-templates select="/biblioteca/revista"/>
+        </ul>
       </body>
     </html>
   </xsl:template>
