@@ -244,6 +244,14 @@
             </span>
           </p>
         </div>
+        <div style="background-color: #fff3e0; padding: 15px; border-left: 5px solid #ff9800; margin-top: 10px;">
+          <p style="font-size: 1.2em; margin: 0;">
+            <strong>Preu mitjà de la col·lecció: </strong>
+            <span style="color: #e65100;">
+              <xsl:value-of select="sum(/biblioteca/llibre/preu) div count(/biblioteca/llibre)"/> €
+            </span>
+          </p>
+        </div>
       </body>
     </html>
   </xsl:template>
