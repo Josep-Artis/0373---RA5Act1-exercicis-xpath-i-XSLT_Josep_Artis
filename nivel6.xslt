@@ -159,6 +159,10 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3> Llista de llibres </h3>
+        <ul>
+          <xsl:apply-templates select="/biblioteca/llibre"/>
+        </ul>
       </body>
     </html>
   </xsl:template>
