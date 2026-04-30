@@ -136,6 +136,20 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>Taula ordenada per Any:</h3>
+        <table border="1">
+          <tr bgcolor="#cccccc">
+            <th>Any</th>
+            <th>Títol</th>
+          </tr>
+          <xsl:for-each select="/biblioteca/llibre">
+            <xsl:sort select="any" data-type="number" order="ascending"/>
+            <tr>
+              <td><xsl:value-of select="any"/></td>
+              <td><xsl:value-of select="titol"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
       </body>
     </html>
   </xsl:template>
