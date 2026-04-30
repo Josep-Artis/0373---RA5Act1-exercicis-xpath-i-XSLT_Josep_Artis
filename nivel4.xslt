@@ -60,6 +60,14 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>Llibres amb preu superior a 12:</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre[preu > 12]">
+            <li>
+              <xsl:value-of select="titol"/> — <strong><xsl:value-of select="preu"/>€</strong>
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
