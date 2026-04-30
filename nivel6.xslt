@@ -162,4 +162,9 @@
       </body>
     </html>
   </xsl:template>
+  <xsl:template match="llibre">
+    <li>
+      <xsl:value-of select="titol"/>
+    </li>
+  </xsl:template>
 </xsl:stylesheet>

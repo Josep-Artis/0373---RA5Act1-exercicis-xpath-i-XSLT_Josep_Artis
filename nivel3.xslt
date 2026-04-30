@@ -42,6 +42,7 @@
             <th>Títol</th>
             <th>Autor</th>
             <th>Any</th>
+            <th>Preu</th>
           </tr>
           <xsl:for-each select="/biblioteca/llibre">
             <tr>
