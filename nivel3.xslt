@@ -34,6 +34,24 @@
             </li>
           </xsl:for-each>
         </ul>
+
+        <h3>Taula de Llibres (3 columnes):</h3>
+        <table border="1">
+          <!-- Fila de encabezados -->
+          <tr bgcolor="#cccccc">
+            <th>Títol</th>
+            <th>Autor</th>
+            <th>Any</th>
+          </tr>
+          <!-- Fila de datos que se repite por cada libro -->
+          <xsl:for-each select="/biblioteca/llibre">
+            <tr>
+              <td><xsl:value-of select="titol"/></td>
+              <td><xsl:value-of select="autor"/></td>
+              <td><xsl:value-of select="any"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
         
       </body>
     </html>
