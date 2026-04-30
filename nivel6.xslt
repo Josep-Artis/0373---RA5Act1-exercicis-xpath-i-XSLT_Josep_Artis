@@ -171,4 +171,11 @@
       <xsl:value-of select="titol"/>
     </li>
   </xsl:template>
+  <xsl:template match="revista">
+    <li>
+      <strong>Revista: </strong>
+      <xsl:value-of select="titol"/> 
+      (Codi: <xsl:value-of select="@codi"/>)
+    </li>
+  </xsl:template>
 </xsl:stylesheet>
