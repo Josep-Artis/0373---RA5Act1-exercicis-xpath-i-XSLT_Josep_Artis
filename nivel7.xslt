@@ -211,6 +211,13 @@
           </xsl:for-each>
           <span style="color: #569cd6;">&lt;/obres&gt;</span>
         </div>
+        <h3>7.2 Generació de text pla (una línia per llibre):</h3>
+        <div style="background-color: #f4f4f4; padding: 15px; border: 1px dashed #999; font-family: monospace; white-space: pre;">
+          <xsl:for-each select="/biblioteca/llibre">
+            <xsl:value-of select="titol"/> - <xsl:value-of select="autor"/> - <xsl:value-of select="any"/>
+            <xsl:text>&#10;</xsl:text> <!-- Esto genera un salto de línea real -->
+          </xsl:for-each>
+        </div>
       </body>
     </html>
   </xsl:template>
