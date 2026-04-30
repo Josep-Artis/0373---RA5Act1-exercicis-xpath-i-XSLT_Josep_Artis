@@ -150,6 +150,15 @@
             </tr>
           </xsl:for-each>
         </table>
+        <h3>Llibres disponibles ordenats per títol:</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre[@estat='disponible']">
+            <xsl:sort select="titol" data-type="text" order="ascending"/>
+            <li>
+              <xsl:value-of select="titol"/>
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
