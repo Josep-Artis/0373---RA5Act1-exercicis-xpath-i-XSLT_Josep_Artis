@@ -81,6 +81,24 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>Estat de disponibilitat:</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre">
+            <li>
+              <xsl:value-of select="titol"/> — 
+              <xsl:choose>
+                <!-- Primera opción: si el atributo de estado es 'disponible' -->
+                <xsl:when test="@estat = 'disponible'">
+                  <span style="color: green;">Disponible</span>
+                </xsl:when>
+                <!-- sino sera prestado -->
+                <xsl:otherwise>
+                  <span style="color: red;">En préstec</span>
+                </xsl:otherwise>
+              </xsl:choose>
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
