@@ -127,6 +127,15 @@
             </li>
           </xsl:for-each>
         </ul>
+        <h3>Llibres de més car a més barat:</h3>
+        <ul>
+          <xsl:for-each select="/biblioteca/llibre">
+            <xsl:sort select="preu" data-type="number" order="descending"/>
+            <li>
+              <xsl:value-of select="titol"/>: <strong><xsl:value-of select="preu"/>€</strong>
+            </li>
+          </xsl:for-each>
+        </ul>
       </body>
     </html>
   </xsl:template>
